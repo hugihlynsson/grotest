@@ -1,5 +1,12 @@
 {
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    },
+  },
   "extends": "airbnb",
   "rules": {
+    "object-curly-spacing": [2, "never"]
   }
 }
