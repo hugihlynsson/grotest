@@ -1,7 +1,207 @@
-.header {
-  font-family: "Grotest", serif;
-  font-weight: normal;
+:global(*) {
+  box-sizing: border-box;
 }
+
+:global(body) {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.root {
+  position: relative;
+  font-family: "Grotest", serif;
+}
+.root--white {
+  background: white;
+  color: black;
+}
+.root--black {
+  background: black;
+  color: white;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1vw;
+}
+
+
+.title {
+  font-size: 3vw;
+  font-weight: normal;
+  margin: 0;
+}
+
+
+input[type=range] {
+  -webkit-appearance: none;
+  background: transparent;
+}
+input[type=range].input--big {
+  width: 30vw;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid transparent;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -7px;
+}
+input[type=range].input--big::-webkit-slider-thumb {
+  height: 2vw;
+  width: 2vw;
+  margin-top: -1vw;
+}
+input[type=range].input--white::-webkit-slider-thumb {
+  background: white;
+  border-color: black;
+}
+input[type=range].input--black::-webkit-slider-thumb {
+  background: black;
+  border-color: white;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 1px;
+  cursor: pointer;
+}
+input[type=range].input--white::-webkit-slider-runnable-track {
+  background: black;
+}
+input[type=range].input--black::-webkit-slider-runnable-track {
+  background: white;
+}
+
+
+.states {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+.states__alignment {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  border: 1px solid black;
+  background: white;
+  cursor: pointer;
+}
+.states__alignment:focus {
+  outline: 0;
+}
+.states__alignment--selected {
+  background: black;
+}
+
+
+.states__backgroundToggle {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.states__backgroundToggle:focus {
+  outline: 0;
+}
+.states__backgroundToggle--white {
+  background: white;
+  border-color: black;
+}
+.states__backgroundToggle--black {
+  background: black;
+  border-color: white;
+}
+
+
+.typer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96vw;
+  height: 82vh;
+  padding: 0 2vw;
+  overflow: hidden;
+}
+
+.typer__input {
+  width: 100%;
+  border: 0;
+}
+.typer__input:focus {
+  outline: 0;
+}
+
+
+.about {
+  padding: 2vw;
+}
+
+.about__text {
+  font-size: 2.6vw;
+}
+
+
+
+.roundness {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 96vw;
+  height: 92vh;
+  padding: 0 2vw 5vh;
+}
+
+
+.roundness__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 10;
+  font-size: 10vw;
+}
+
+
+.roundness__input {
+  position: relative;
+}
+.roundness__input:before,
+.roundness__input:after {
+  content: "";
+  transform: translateY(-50%);
+  position: absolute;
+  width: 2vw;
+  height: 2vw;
+  background: black;
+}
+.roundness__input.input--black:before,
+.roundness__input.input--black:after {
+  background: white;
+}
+.roundness__input:before {
+  right: calc(100% + 2vw);
+  border-radius: 50%;
+}
+.roundness__input:after {
+  left: calc(100% + 2vw);
+}
+
+
 
 @font-face {
   font-family: "Grotest";
