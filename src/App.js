@@ -15,6 +15,14 @@ export default class App extends Component {
     };
   }
 
+  componentDidMount = () => {
+    const range = document.createRange();
+
+    range.setStart(this.refs.typer__input, 1);
+    window.getSelection().addRange(range);
+    this.refs.typer__input.focus();
+  }
+
   handleAlignClick = (textAlign) => this.setState({textAlign});
 
   render() {
@@ -79,6 +87,7 @@ export default class App extends Component {
             className={styles.typer__input}
             contentEditable
             style={{textAlign, fontSize: `${fontSize}vw`}}
+            ref="typer__input"
           >
             Halló, halló!
           </div>

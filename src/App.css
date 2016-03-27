@@ -163,7 +163,7 @@ input[type=range].input--black::-webkit-slider-runnable-track {
   justify-content: center;
   flex-direction: column;
   width: 96vw;
-  height: 92vh;
+  height: 90vh;
   padding: 0 2vw 5vh;
 }
 
