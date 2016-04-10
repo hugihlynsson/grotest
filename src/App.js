@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import classNames from 'classnames';
 
+import Roundness from './Roundness';
 import styles from './App.css';
 
 export default class App extends Component {
@@ -10,7 +11,7 @@ export default class App extends Component {
     this.state = {
       background: 'white',
       fontSize: 10,
-      roundness: 0,
+      roundness: 1,
       textAlign: 'center',
     };
   }
@@ -22,6 +23,9 @@ export default class App extends Component {
     window.getSelection().addRange(range);
     this.refs.typer__input.focus();
   }
+
+
+  setRoundness = (roundness) => this.setState({roundness});
 
   handleAlignClick = (textAlign) => this.setState({textAlign});
 
@@ -111,23 +115,7 @@ export default class App extends Component {
           </p>
         </section>
 
-        <section className={styles.roundness}>
-          <div className={styles.roundness__text}>
-            Grotest
-          </div>
-          <input
-            type="range"
-            className={classNames(
-              styles[`input--${background}`],
-              styles['input--big'],
-              styles.roundness__input,
-            )}
-            min={0}
-            max={5}
-            value={roundness}
-            onChange={(event) => this.setState({roundness: event.target.value})}
-          />
-        </section>
+        <Roundness background={background} onChange={::this.setRoundness} value={roundness} />
       </div>
     );
   }

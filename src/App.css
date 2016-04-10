@@ -169,52 +169,6 @@ input[type=range].input--black::-webkit-slider-runnable-track {
 
 
 
-.roundness {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 96vw;
-  height: 90vh;
-  padding: 0 2vw 5vh;
-}
-
-
-.roundness__text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 10;
-  font-size: 10vw;
-}
-
-
-.roundness__input {
-  position: relative;
-}
-.roundness__input:before,
-.roundness__input:after {
-  content: "";
-  transform: translateY(-50%);
-  position: absolute;
-  width: 2vw;
-  height: 2vw;
-  background: black;
-}
-.roundness__input.input--black:before,
-.roundness__input.input--black:after {
-  background: white;
-}
-.roundness__input:before {
-  right: calc(100% + 2vw);
-  border-radius: 50%;
-}
-.roundness__input:after {
-  left: calc(100% + 2vw);
-}
-
-
-
 @font-face {
   font-family: "Grotest";
   src: url("./Grotest_01-Regular.otf");
