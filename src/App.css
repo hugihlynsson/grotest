@@ -15,6 +15,10 @@
   background: white;
   color: black;
 }
+.root--yellow {
+  background: #FFF101;
+  color: black;
+}
 .root--black {
   background: black;
   color: white;
@@ -58,15 +62,13 @@ input[type=range]::-webkit-slider-thumb {
   border-radius: 50%;
   cursor: pointer;
   margin-top: -7px;
+  background: white;
+  border-color: black;
 }
 input[type=range].input--big::-webkit-slider-thumb {
   height: 2vw;
   width: 2vw;
   margin-top: -1vw;
-}
-input[type=range].input--white::-webkit-slider-thumb {
-  background: white;
-  border-color: black;
 }
 input[type=range].input--black::-webkit-slider-thumb {
   background: black;
@@ -76,8 +78,6 @@ input[type=range].input--black::-webkit-slider-thumb {
 input[type=range]::-webkit-slider-runnable-track {
   height: 1px;
   cursor: pointer;
-}
-input[type=range].input--white::-webkit-slider-runnable-track {
   background: black;
 }
 input[type=range].input--black::-webkit-slider-runnable-track {
@@ -95,17 +95,18 @@ input[type=range].input--black::-webkit-slider-runnable-track {
 .states__alignment {
   display: block;
   width: 20px;
-  height: 20px;
+  height: 26px;
   margin: 0 5px;
-  border: 1px solid black;
-  background: white;
   cursor: pointer;
-}
-.states__alignment:focus {
-  outline: 0;
+  border: 0;
+  padding-bottom: 4px;
+  border-bottom: 1px solid transparent;
 }
 .states__alignment--selected {
-  background: black;
+  border-bottom-color: black;
+}
+.root--black .states__alignment--selected {
+  border-bottom-color: white;
 }
 
 
@@ -124,11 +125,17 @@ input[type=range].input--black::-webkit-slider-runnable-track {
   background: white;
   border-color: black;
 }
+.states__backgroundToggle--yellow {
+  background: #FFF101;
+  border-color: black;
+}
 .states__backgroundToggle--black {
   background: black;
+  border-color: black;
+}
+.root--black .states__backgroundToggle--black {
   border-color: white;
 }
-
 
 .typer {
   display: flex;

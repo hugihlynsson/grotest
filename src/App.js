@@ -34,28 +34,28 @@ export default class App extends Component {
         <header className={styles.header}>
           <h1 className={styles.title}>Grotest</h1>
           <div className={styles.states}>
-            <button
+            <img
               className={classNames(
                 styles.states__alignment,
-                styles['states__alignment--left'],
                 textAlign === 'left' && styles['states__alignment--selected'],
               )}
+              src={require('./icons/AlignLeft.svg')}
               onClick={() => this.handleAlignClick('left')}
             />
-            <button
+            <img
               className={classNames(
                 styles.states__alignment,
-                styles['states__alignment--center'],
                 textAlign === 'center' && styles['states__alignment--selected'],
               )}
+              src={require('./icons/AlignCenter.svg')}
               onClick={() => this.handleAlignClick('center')}
             />
-            <button
+            <img
               className={classNames(
                 styles.states__alignment,
-                styles['states__alignment--right'],
                 textAlign === 'right' && styles['states__alignment--selected'],
               )}
+              src={require('./icons/AlignRight.svg')}
               onClick={() => this.handleAlignClick('right')}
             />
             <input
@@ -72,6 +72,12 @@ export default class App extends Component {
                 styles.states__backgroundToggle, styles['states__backgroundToggle--white']
               )}
               onClick={() => this.setState({background: 'white'})}
+            />
+            <button
+              className={classNames(
+                styles.states__backgroundToggle, styles['states__backgroundToggle--yellow']
+              )}
+              onClick={() => this.setState({background: 'yellow'})}
             />
             <button
               className={classNames(
