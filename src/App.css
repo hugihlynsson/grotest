@@ -141,6 +141,7 @@ input[type=range].input--black::-webkit-slider-runnable-track {
 }
 
 .typer {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -157,6 +158,31 @@ input[type=range].input--black::-webkit-slider-runnable-track {
 .typer__input:focus {
   outline: 0;
 }
+
+
+.typer__sticker {
+  position: absolute;
+  bottom: 8vmin;
+  right: 8vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vmin;
+  width: 20vmin;
+  padding: 2vmin;
+
+  background: #FFF111;
+  border-radius: 50%;
+  font-size: 3vmin;
+  text-align: center;
+  transform: rotate(10deg);
+  color: black;
+}
+.root--yellow .typer__sticker {
+  background: black;
+  color: white;
+}
+
 
 
 .about {

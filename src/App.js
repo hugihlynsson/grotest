@@ -101,6 +101,7 @@ export default class App extends Component {
           >
             Halló, halló!
           </div>
+          <div className={styles.typer__sticker}>Randomly Mixed!</div>
         </section>
 
         <section className={styles.about}>
