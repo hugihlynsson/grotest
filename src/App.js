@@ -32,7 +32,7 @@ export default class App extends Component {
       <div className={classNames(styles.root, styles[`root--${background}`])}>
 
         <header className={styles.header}>
-          <h1 className={styles.title}>Neo Grotest</h1>
+          <h1 className={styles.title}>Grotest</h1>
           <div className={styles.states}>
             <button
               className={classNames(
@@ -95,7 +95,7 @@ export default class App extends Component {
 
         <section className={styles.about}>
           <p className={styles.about__text}>
-            Neo Grotest liggur í hugleiðingum með stílhreint þægilegt og ferskt. Það er breitt, smá
+            Grotest liggur í hugleiðingum með stílhreint þægilegt og ferskt. Það er breitt, smá
             frekt og skín í gegn með fínni slípun á bogum, breiddum og línum. Test 01 er með lítla
             andstæðu (e. contrast) sem hentar vel fyrir augað. Hann er hugsaður sem fyrirsagnaletur
             og getur notast sem texta letur einnig. Í stöfum eins og A, N, M, V, v, W, w, 1, og 4 er
@@ -107,7 +107,7 @@ export default class App extends Component {
 
         <section className={styles.roundness}>
           <div className={styles.roundness__text}>
-            Neo Grotest
+            Grotest
           </div>
           <input
             type="range"
