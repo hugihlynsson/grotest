@@ -31,14 +31,17 @@
   padding: 1vw;
 }
 
-
 .title {
   font-size: 3vw;
   font-weight: normal;
   margin: 1.5vw 0.8vw;
   line-height: 0.6;
-  border-bottom: 0.2vw solid #000;
+  border-bottom: 0.2vw solid black;
 }
+.root--black .title {
+  border-bottom-color: white;
+}
+
 
 
 input[type=range] {
