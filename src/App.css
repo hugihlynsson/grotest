@@ -31,7 +31,9 @@
 .title {
   font-size: 3vw;
   font-weight: normal;
-  margin: 0;
+  margin: 1.5vw 0.8vw;
+  line-height: 0.6;
+  border-bottom: 0.2vw solid #000;
 }
 
 
