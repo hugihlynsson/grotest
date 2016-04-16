@@ -45,6 +45,7 @@ export default class App extends Component {
               )}
               src={require('./icons/AlignLeft.svg')}
               onClick={() => this.handleAlignClick('left')}
+              alt="Align Left"
             />
             <img
               className={classNames(
@@ -53,6 +54,7 @@ export default class App extends Component {
               )}
               src={require('./icons/AlignCenter.svg')}
               onClick={() => this.handleAlignClick('center')}
+              alt="Align Center"
             />
             <img
               className={classNames(
@@ -61,6 +63,7 @@ export default class App extends Component {
               )}
               src={require('./icons/AlignRight.svg')}
               onClick={() => this.handleAlignClick('right')}
+              alt="Align Right"
             />
             <input
               type="range"
