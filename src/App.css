@@ -197,5 +197,5 @@ input[type=range].input--black::-webkit-slider-runnable-track {
 
 @font-face {
   font-family: "Grotest";
-  src: url("./Grotest_01-Regular.otf");
+  src: url("./fonts/Grotest_01-Regular.otf");
 }
