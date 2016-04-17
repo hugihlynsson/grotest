@@ -10,6 +10,8 @@
 .root {
   position: relative;
   font-family: "Grotest", serif;
+  width: 100vw;
+  overflow: hidden;
 }
 .root--white {
   background: white;
@@ -205,6 +207,16 @@ input[type=range].input--black::-webkit-slider-runnable-track {
   bottom: 0vmin;
   right: 5vmin;
   width: 4vmin;
+}
+
+
+.newBorder {
+  font-size: 3vw;
+  background: #FFF111;
+  border: 0.3vw solid black;
+  padding: 1vw;
+  width: 200vw;
+  transform: translateX(-25%) rotate(-20deg);
 }
 
 

@@ -122,6 +122,11 @@ export default class App extends Component {
           />
         </section>
 
+        <div className={styles.newBorder}>
+          Very new! Very new! Very new! Very new! Very new! Very new! Very new! Very new!
+          Very new! Very new! Very new!
+        </div>
+
         <Roundness background={background} onChange={::this.setRoundness} value={roundness} />
       </div>
     );
