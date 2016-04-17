@@ -149,7 +149,7 @@ input[type=range].input--black::-webkit-slider-runnable-track {
   justify-content: center;
   width: 100vw;
   height: 82vh;
-  padding: 0 2vw;
+  padding: 0 12vw;
   overflow: hidden;
 }
 
@@ -159,6 +159,10 @@ input[type=range].input--black::-webkit-slider-runnable-track {
 }
 .typer__input:focus {
   outline: 0;
+}
+
+.typer__input__alt {
+  color: red;
 }
 
 

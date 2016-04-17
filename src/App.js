@@ -1,19 +1,49 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import classNames from 'classnames';
-import {Editor, EditorState, ContentState} from 'draft-js';
+import {Editor, EditorState, ContentState, CompositeDecorator} from 'draft-js';
 
 import Roundness from './Roundness';
 import styles from './App.css';
+
+
+function random(seed) {
+  const x = Math.sin(seed + 1) * 10000;
+  return x - Math.floor(x);
+}
+
+function altStrategy(contentBlock, callback) {
+  for (let index = 0; index < contentBlock.getLength(); index += 1) {
+    if (random(index) > 0.5) {
+      callback(index, index + 1);
+    }
+  }
+}
+
+const AltSpan = (props) => (
+  <span {...props} style={{fontFamily: 'GrotestRectangular'}}>
+    {props.children}
+  </span>
+);
+
+AltSpan.propTypes = {
+  children: PropTypes.any,
+};
 
 export default class App extends Component {
 
   constructor(props) {
     super(props);
-    const contentState = ContentState.createFromText('Eeeey! Letrið er hugsað aðeins fyrir þig. ');
+    const altDraftDecroator = {
+      strategy: altStrategy,
+      component: AltSpan,
+    };
+    const compositeDecorator = new CompositeDecorator([altDraftDecroator]);
+    const contentState = ContentState.createFromText('Eeeey!\nLetrið er hugsað aðeins fyrir þig. ');
+    const editorState = EditorState.createWithContent(contentState, compositeDecorator);
     this.state = {
       background: 'white',
-      editorState: EditorState.moveFocusToEnd(EditorState.createWithContent(contentState)),
-      fontSize: 10,
+      editorState: EditorState.moveFocusToEnd(editorState),
+      fontSize: 7,
       roundness: 1,
       textAlign: 'left',
     };
