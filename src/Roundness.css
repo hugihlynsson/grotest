@@ -4,8 +4,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 96vw;
-  height: 90vh;
+  width: 100vw;
+  height: 100vh;
   padding: 0 2vw 5vh;
 }
 
@@ -50,6 +50,15 @@
 .input:after {
   left: calc(100% + 2vw);
 }
+
+.arrow {
+  position: absolute;
+  bottom: 5vmin;
+  right: 5vmin;
+  width: 4vmin;
+  transform: rotate(180deg);
+}
+
 
 
 @font-face {

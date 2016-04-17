@@ -45,6 +45,11 @@ const Roundness = ({onChange, value, background}) => (
       value={value}
       onChange={(event) => onChange(parseInt(event.target.value, 10))}
     />
+    <img
+      alt="Go up"
+      className={styles.arrow}
+      src={require('./icons/Arrow.svg')}
+    />
   </section>
 );
 

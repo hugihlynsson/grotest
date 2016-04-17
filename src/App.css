@@ -145,7 +145,7 @@ input[type=range].input--black::-webkit-slider-runnable-track {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 96vw;
+  width: 100vw;
   height: 82vh;
   padding: 0 2vw;
   overflow: hidden;
@@ -186,11 +186,25 @@ input[type=range].input--black::-webkit-slider-runnable-track {
 
 
 .about {
-  padding: 2vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2vh 12vw;
 }
 
 .about__text {
-  font-size: 2.6vw;
+  font-size: 3.2vw;
+  line-height: 1.4;
+}
+
+
+.arrow {
+  position: absolute;
+  bottom: 0vmin;
+  right: 5vmin;
+  width: 4vmin;
 }
 
 

@@ -105,18 +105,21 @@ export default class App extends Component {
             Halló, halló!
           </div>
           <div className={styles.typer__sticker}>Randomly Mixed!</div>
+          <img
+            alt="Go down"
+            className={styles.arrow}
+            src={require('./icons/Arrow.svg')}
+          />
         </section>
 
         <section className={styles.about}>
           <p className={styles.about__text}>
-            Grotest liggur í hugleiðingum með stílhreint þægilegt og ferskt. Það er breitt, smá
-            frekt og skín í gegn með fínni slípun á bogum, breiddum og línum. Test 01 er með lítla
-            andstæðu (e. contrast) sem hentar vel fyrir augað. Hann er hugsaður sem fyrirsagnaletur
-            og getur notast sem texta letur einnig. Í stöfum eins og A, N, M, V, v, W, w, 1, og 4 er
-            að finna horn þar sem linurnar mætast seint, sem kryddar letrið einstaklega vel.
-            Krókarnir á stöfunum eins og a, e og c eru skornir lárétt því hugsað er til kassalagað
-            letursins eða Grotest 02 svo blandan á letrunum sé sjónlega þægilegri.
-          </p>
+            Grotest is the culmination of research in shape and type composition. The typeface            contains two fonts; one circular and the other rectangular. They generate randomly            when the user types, creating a unique typographical pattern with endless comnbinations.          </p>
+          <img
+            alt="Go down"
+            className={styles.arrow}
+            src={require('./icons/Arrow.svg')}
+          />
         </section>
 
         <Roundness background={background} onChange={::this.setRoundness} value={roundness} />
