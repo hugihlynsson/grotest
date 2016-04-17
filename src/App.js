@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import classNames from 'classnames';
-import {Editor, EditorState} from 'draft-js';
+import {Editor, EditorState, ContentState} from 'draft-js';
 
 import Roundness from './Roundness';
 import styles from './App.css';
@@ -9,18 +9,21 @@ export default class App extends Component {
 
   constructor(props) {
     super(props);
+    const contentState = ContentState.createFromText('Eeeey! Letrið er hugsað aðeins fyrir þig. ');
     this.state = {
       background: 'white',
-      editorState: EditorState.createEmpty(),
+      editorState: EditorState.moveFocusToEnd(EditorState.createWithContent(contentState)),
       fontSize: 10,
       roundness: 1,
-      textAlign: 'center',
+      textAlign: 'left',
     };
   }
 
   onEditorChange = (editorState) => this.setState({editorState});
 
   setRoundness = (roundness) => this.setState({roundness});
+
+  focusEditor = () => this.editor.focus();
 
   handleAlignClick = (textAlign) => this.setState({textAlign});
 
@@ -91,8 +94,17 @@ export default class App extends Component {
         </header>
 
         <section className={styles.typer}>
-          <div className={styles.typer__input} style={{textAlign, fontSize: `${fontSize}vw`}}>
-            <Editor editorState={editorState} onChange={::this.onEditorChange} />
+          <div
+            className={styles.typer__input}
+            onClick={::this.focusEditor}
+            style={{textAlign, fontSize: `${fontSize}vw`}}
+          >
+            <Editor
+              editorState={editorState}
+              onChange={::this.onEditorChange}
+              ref={(c) => {this.editor = c;}}
+              stripPastedStyles
+            />
           </div>
           <div className={styles.typer__sticker}>Randomly Mixed!</div>
           <img

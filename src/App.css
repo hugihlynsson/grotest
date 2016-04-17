@@ -231,3 +231,13 @@ input[type=range].input--black::-webkit-slider-runnable-track {
   font-family: "Grotest";
   src: url("./fonts/Grotest_01-Regular.otf");
 }
+
+@font-face {
+  font-family: "GrotestCircular";
+  src: url("./fonts/Grotest_circular-Regular.otf");
+}
+
+@font-face {
+  font-family: "GrotestRectangular";
+  src: url("./fonts/Grotest_rectangular-Regular.otf");
+}
