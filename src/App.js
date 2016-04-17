@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import classNames from 'classnames';
+import {Editor, EditorState} from 'draft-js';
 
 import Roundness from './Roundness';
 import styles from './App.css';
@@ -10,27 +11,21 @@ export default class App extends Component {
     super(props);
     this.state = {
       background: 'white',
+      editorState: EditorState.createEmpty(),
       fontSize: 10,
       roundness: 1,
       textAlign: 'center',
     };
   }
 
-  componentDidMount = () => {
-    const range = document.createRange();
-
-    range.setStart(this.refs.typer__input, 1);
-    window.getSelection().addRange(range);
-    this.refs.typer__input.focus();
-  }
-
+  onEditorChange = (editorState) => this.setState({editorState});
 
   setRoundness = (roundness) => this.setState({roundness});
 
   handleAlignClick = (textAlign) => this.setState({textAlign});
 
   render() {
-    const {fontSize, textAlign, roundness, background} = this.state;
+    const {editorState, fontSize, textAlign, roundness, background} = this.state;
 
     return (
       <div className={classNames(styles.root, styles[`root--${background}`])}>
@@ -96,13 +91,8 @@ export default class App extends Component {
         </header>
 
         <section className={styles.typer}>
-          <div
-            className={styles.typer__input}
-            contentEditable
-            style={{textAlign, fontSize: `${fontSize}vw`}}
-            ref="typer__input"
-          >
-            Halló, halló!
+          <div className={styles.typer__input} style={{textAlign, fontSize: `${fontSize}vw`}}>
+            <Editor editorState={editorState} onChange={::this.onEditorChange} />
           </div>
           <div className={styles.typer__sticker}>Randomly Mixed!</div>
           <img
