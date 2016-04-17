@@ -50,6 +50,14 @@
 .input:after {
   left: calc(100% + 2vw);
 }
+input[type=range].input--black::-webkit-slider-thumb {
+  background: black;
+  border-color: white;
+}
+input[type=range].input--black::-webkit-slider-runnable-track {
+  background: white;
+}
+
 
 .arrow {
   position: absolute;

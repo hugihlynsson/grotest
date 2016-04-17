@@ -218,6 +218,12 @@ input[type=range].input--black::-webkit-slider-runnable-track {
   width: 200vw;
   transform: translateX(-25%) rotate(-20deg);
 }
+.root--yellow .newBorder {
+  background: white;
+}
+.root--black .newBorder {
+  color: black;
+}
 
 
 
