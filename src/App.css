@@ -9,7 +9,7 @@
 
 .root {
   position: relative;
-  font-family: "Grotest", serif;
+  font-family: "GrotestCircular", serif;
   width: 100vw;
   overflow: hidden;
 }
@@ -25,6 +25,11 @@
   background: black;
   color: white;
 }
+
+.type__alt {
+  font-family: "GrotestRectangular", serif;
+}
+
 
 
 .header {
@@ -168,10 +173,6 @@ input[type=range].input--black::-webkit-slider-runnable-track {
   outline: 0;
 }
 
-.typer__input__alt {
-  color: red;
-}
-
 
 .typer__sticker {
   position: absolute;
@@ -235,11 +236,6 @@ input[type=range].input--black::-webkit-slider-runnable-track {
 }
 
 
-
-@font-face {
-  font-family: "Grotest";
-  src: url("./fonts/Grotest_01-Regular.otf");
-}
 
 @font-face {
   font-family: "GrotestCircular";

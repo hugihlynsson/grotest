@@ -155,8 +155,16 @@ export default class App extends Component {
         </section>
 
         <div className={styles.newBorder}>
-          Very new! Very new! Very new! Very new! Very new! Very new! Very new! Very new!
-          Very new! Very new! Very new!
+          V<span className={styles.type__alt}>e</span>ry new!
+          Very n<span className={styles.type__alt}>e</span>w! Very
+          n<span className={styles.type__alt}>e</span>w! Very
+          n<span className={styles.type__alt}>e</span>w!
+          V<span className={styles.type__alt}>e</span>ry new!
+          V<span className={styles.type__alt}>e</span>ry
+          n<span className={styles.type__alt}>e</span>w! Very
+          n<span className={styles.type__alt}>e</span>w! Very new!
+          V<span className={styles.type__alt}>e</span>ry new! Very new!
+          V<span className={styles.type__alt}>e</span>ry new!
         </div>
 
         <Roundness background={background} onChange={::this.setRoundness} value={roundness} />
