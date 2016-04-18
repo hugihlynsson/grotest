@@ -186,6 +186,7 @@ input[type=range].input--black::-webkit-slider-runnable-track {
 
   background: #FFF111;
   border-radius: 50%;
+  box-shadow: 1vw 1vw 1vw rgba(0,0,0,0.5);
   font-size: 3vmin;
   text-align: center;
   transform: rotate(10deg);
