@@ -41,7 +41,7 @@ export default class App extends Component {
     const contentState = ContentState.createFromText('Eeeey!\nLetrið er hugsað aðeins fyrir þig. ');
     const editorState = EditorState.createWithContent(contentState, compositeDecorator);
     this.state = {
-      background: 'white',
+      background: 'yellow',
       editorState: EditorState.moveFocusToEnd(editorState),
       fontSize: 7,
       roundness: 1,
