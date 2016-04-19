@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "webpack",
+    "build": "NODE_ENV=production webpack -p --config webpack.prod.config.js",
     "start": "node server.js",
     "lint": "eslint src"
   },
