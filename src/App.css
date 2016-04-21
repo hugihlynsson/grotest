@@ -18,7 +18,7 @@
   color: black;
 }
 .root--yellow {
-  background: linear-gradient(white, #FFF111, white, #FFF111);
+  background: linear-gradient(white, #FFF101, white, #FFF101);
   color: black;
 }
 .root--black {
@@ -188,7 +188,7 @@ input[type=range].input--black::-webkit-slider-runnable-track {
   width: 20vmin;
   padding: 2vmin;
 
-  background: #FFF111;
+  background: #FFF101;
   border-radius: 50%;
   box-shadow: 1vw 1vw 1vw rgba(0,0,0,0.5);
   font-size: 3vmin;
@@ -206,12 +206,12 @@ input[type=range].input--black::-webkit-slider-runnable-track {
 
 @keyframes blink {
   0% {
-    background: #FFF111;
+    background: #FFF101;
     color: black;
     border-color: black;
   }
   33% {
-    background: #FFF111;
+    background: #FFF101;
     color: black;
     border-color: black;
   }
