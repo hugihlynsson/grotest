@@ -38,7 +38,7 @@ export default class App extends Component {
       component: AltSpan,
     };
     const compositeDecorator = new CompositeDecorator([altDraftDecroator]);
-    const contentState = ContentState.createFromText('Eeeey!\nLetrið er hugsað aðeins fyrir þig. ');
+    const contentState = ContentState.createFromText('Randomly mixed for your work! Write here. ');
     const editorState = EditorState.createWithContent(contentState, compositeDecorator);
     this.state = {
       background: 'yellow',
