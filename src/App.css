@@ -257,7 +257,7 @@ input[type=range].input--black::-webkit-slider-runnable-track {
   position: absolute;
   bottom: 0vmin;
   right: 5vmin;
-  width: 4vmin;
+  width: 6vmin;
 }
 
 
