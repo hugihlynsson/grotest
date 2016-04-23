@@ -302,7 +302,7 @@ input[type=range].input--black::-webkit-slider-runnable-track {
     font-size: 6vw;
     border: 0.6vw solid black;
     padding: 2vw;
-    width: 400vw;
+    width: 600vw;
   }
 }
 
