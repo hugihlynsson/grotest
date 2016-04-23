@@ -276,6 +276,45 @@ input[type=range].input--black::-webkit-slider-runnable-track {
 }
 
 
+@media screen and (max-width: 740px) {
+  .typer__sticker {
+    height: 30vmin;
+    width: 30vmin;
+    padding: 3vmin;
+    font-size: 4vmin;
+    border: 0.3vw solid transparent;
+  }
+
+  .about {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2vh 12vw;
+  }
+  .about__text {
+    font-size: 5vw;
+    line-height: 1.4;
+  }
+
+  .newBorder {
+    font-size: 6vw;
+    border: 0.6vw solid black;
+    padding: 2vw;
+    width: 400vw;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 1vw;
+  }
+}
+
 
 @font-face {
   font-family: "GrotestCircular";
