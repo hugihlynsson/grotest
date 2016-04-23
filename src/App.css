@@ -250,7 +250,7 @@ input[type=range].input--black::-webkit-slider-runnable-track {
 }
 
 .about__text {
-  font-size: 3.16vw;
+  font-size: 3.1vw;
   line-height: 1.4;
 }
 
@@ -259,7 +259,7 @@ input[type=range].input--black::-webkit-slider-runnable-track {
   position: absolute;
   bottom: 0vmin;
   right: 5vmin;
-  width: 6vmin;
+  width: 5vmin;
 }
 
 

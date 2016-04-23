@@ -63,7 +63,7 @@ input[type=range].input--black::-webkit-slider-runnable-track {
   position: absolute;
   bottom: 5vmin;
   right: 5vmin;
-  width: 6vmin;
+  width: 5vmin;
   transform: rotate(180deg);
 }
 
