@@ -68,6 +68,28 @@ input[type=range].input--black::-webkit-slider-runnable-track {
 }
 
 
+@media screen and (max-width: 740px) {
+  .input {
+    width: 220px;
+    margin-bottom: 30px;
+  }
+  .input:before,
+  .input:after {
+    width: 20px;
+    height: 20px;
+  }
+  .input:before { right: calc(100% + 10px); }
+  .input:after { left: calc(100% + 10px); }
+  input[type=range].input--black::-webkit-slider-thumb {
+    background: black;
+    border-color: white;
+  }
+  .text {
+    font-size: 20vw;
+  }
+}
+
+
 
 @font-face {
   font-family: "Grotest1";
